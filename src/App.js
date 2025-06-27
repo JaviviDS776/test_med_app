@@ -7,6 +7,10 @@ import Navbar from './Components/Navbar/Navbar';
 // Importar el componente Landing_Page
 import Landing_Page from './Components/Landing_Page/Landing_Page';
 
+import Login from './Components/Login/Login';
+
+import SignUp from './Components/Sign_Up/Sign_Up';
+
 // Componente de función para la aplicación principal
 function App() {
   // Renderizar el componente principal de la aplicación
@@ -21,8 +25,8 @@ function App() {
           {/* Ruta principal - Landing Page */}
           <Route path="/" element={<Landing_Page/>}/>
           <Route path="/appointments" element={<div>Citas - Temporal</div>}/>
-          <Route path="/sign-up" element={<div>Registro - Temporal</div>}/>
-          <Route path="/login" element={<div>Iniciar Sesión - Temporal</div>}/>
+          <Route path="/sign-up" element={<SignUp/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </BrowserRouter>
     </div>
