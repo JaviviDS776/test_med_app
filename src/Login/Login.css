@@ -1,0 +1,55 @@
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 900px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 40px; /* Relleno dentro del contenedor */
+    margin-top: 10%; /* Margen superior del 10% */
+}
+
+/* Estilos para grupos de formularios */
+.form-group {
+    margin-bottom: 20px; /* Margen inferior para el espacio entre grupos de formularios */
+}
+
+/* Estilos para etiquetas de grupos de formularios */
+.form-group label {
+    display: block; /* Hacer que las etiquetas se muestren como elementos de bloque */
+    margin-bottom: 5px; /* Margen inferior para el espacio debajo de las etiquetas */
+    font-weight: bold; /* Texto en negrita para las etiquetas */
+}
+
+/* Estilos para controles de formulario */
+.form-control {
+    width: 40%; /* Ancho de los controles de formulario */
+    padding: 8px; /* Relleno dentro de los controles de formulario */
+    font-size: 16px; /* Tamaño de fuente de los controles de formulario */
+    border: 1px solid #ccc; /* Borde alrededor de los controles de formulario */
+    border-radius: 4px; /* Radio de borde para esquinas redondeadas */
+}
+
+/* Estilos para grupos de botones */
+.btn-group {
+    margin-top: .0001px; /* Margen superior para el espacio sobre grupos de botones */
+    margin-bottom: 20px; /* Margen inferior para el espacio debajo de grupos de botones */
+}
+
+/* Estilos para botones */
+.btn {
+    padding: 10px 20px; /* Relleno dentro de los botones */
+    font-size: 16px; /* Tamaño de fuente de los botones */
+    border: none; /* Sin borde para los botones */
+    border-radius: 4px; /* Radio de borde para esquinas redondeadas en los botones */
+    cursor: pointer; /* Estilo del cursor al pasar sobre los botones */
+}
+
+/* Estilos para botones primarios */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo para botones primarios */
+    color: #fff; /* Color de texto para botones primarios */
+}
+
+/* Estilos para botones de peligro (rojos) */
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo para botones de peligro */
+    color: #fff; /* Color de texto para botones de peligro */
+}

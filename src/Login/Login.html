@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="./Login.css"> <!-- Puedes usar el mismo estilo o crear uno nuevo -->
+</head>
+<body>
+    <div class="container" style="margin-top: 5%;"> <!-- Contenedor principal -->
+        <div class="login-grid"> <!-- Grid layout para el login -->
+            <div class="login-text">
+                <h1>Login</h1>
+            </div>
+            <div class="login-text1" style="text-align: left;">
+                Are you a new member? <span><a href="../Sign_Up/Sign_Up.html" style="color: #2190FF;">Sign Up Here</a></span>
+            </div>
+            <div class="login-form">
+                <form> <!-- Inicio del formulario -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required class="form-control" placeholder="Enter your email" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required class="form-control" placeholder="Enter your password" />
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary mb-2 mr-1">Login</button>
+                        <button type="reset" class="btn btn-danger mb-2">Reset</button>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        <a href="#" style="text-decoration: none; color: black;">Forgot Password?</a>
+                    </div>
+                </form> <!-- Fin del formulario -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
