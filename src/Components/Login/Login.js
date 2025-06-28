@@ -14,7 +14,7 @@ const Login = () => {
         <div className="login-text1" style={{ textAlign: "left" }}>
           Are you a new member?{" "}
           <span>
-            <Link to="/signup" style={{ color: "#2190FF" }}>
+            <Link to="/sign-up" style={{ color: "#2190FF" }}>
               Sign Up Here
             </Link>
           </span>
