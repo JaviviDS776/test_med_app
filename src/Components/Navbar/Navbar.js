@@ -1,16 +1,57 @@
 // Importar los módulos necesarios de la biblioteca React
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 // Componente de función para la barra de navegación
 const Navbar = () => {
     // Estado para manejar el menú móvil
     const [isActive, setIsActive] = useState(false);
+    // Estado para manejar si el usuario está autenticado
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // Estado para almacenar el nombre del usuario
+    const [userName, setUserName] = useState('');
+    
+    // Hook de navegación
+    const navigate = useNavigate();
     
     // Función para manejar el clic en el icono del menú
     const handleClick = () => {
         setIsActive(!isActive);
+    };
+
+    // useEffect para verificar si el usuario está autenticado
+    useEffect(() => {
+        const authToken = sessionStorage.getItem("auth-token");
+        const userEmail = sessionStorage.getItem("email");
+        
+        if (authToken && userEmail) {
+            setIsLoggedIn(true);
+            // Extraer el nombre del usuario del email (parte antes del @)
+            const extractedName = userEmail.split('@')[0];
+            setUserName(extractedName);
+        } else {
+            setIsLoggedIn(false);
+            setUserName('');
+        }
+    }, []);
+
+    // Función para manejar el logout
+    const handleLogout = () => {
+        // Limpiar todos los datos del sessionStorage
+        sessionStorage.removeItem("auth-token");
+        sessionStorage.removeItem("name");
+        sessionStorage.removeItem("phone");
+        sessionStorage.removeItem("email");
+        
+        // Actualizar los estados
+        setIsLoggedIn(false);
+        setUserName('');
+        
+        // Redirigir a la página de inicio
+        navigate("/");
+        // Recargar la página para actualizar la interfaz
+        window.location.reload();
     };
 
     return (
@@ -55,18 +96,46 @@ const Navbar = () => {
                 <li className="link">
                     <Link to="/appointments">Citas</Link>
                 </li>
-                {/* Elemento de lista para el enlace 'Registrarse' con un botón */}
-                <li className="link">
-                    <Link to="/sign-up">
-                        <button className="btn1">Registrarse</button>
-                    </Link>
-                </li>
-                {/* Elemento de lista para el enlace 'Iniciar Sesión' con un botón */}
-                <li className="link">
-                    <Link to="/login">
-                        <button className="btn1">Iniciar Sesión</button>
-                    </Link>
-                </li>
+                
+                {/* Renderizado condicional basado en el estado de autenticación */}
+                {isLoggedIn ? (
+                    // Si el usuario está autenticado, mostrar nombre y botón de logout
+                    <>
+                        {/* Mensaje de bienvenida con nombre del usuario */}
+                        <li className="link welcome-user">
+                            <span style={{ color: '#0d213f', marginRight: '1rem' }}>
+                                Bienvenido, {userName}
+                            </span>
+                            {/* Menú desplegable opcional */}
+                            <ul className="dropdown-menu">
+                                <li><Link to="/profile">Mi Perfil</Link></li>
+                                <li><Link to="/appointments">Mis Citas</Link></li>
+                            </ul>
+                        </li>
+                        {/* Botón de Cerrar Sesión */}
+                        <li className="link">
+                            <button className="btn2" onClick={handleLogout}>
+                                Cerrar Sesión
+                            </button>
+                        </li>
+                    </>
+                ) : (
+                    // Si el usuario no está autenticado, mostrar botones de registro y login
+                    <>
+                        {/* Elemento de lista para el enlace 'Registrarse' con un botón */}
+                        <li className="link">
+                            <Link to="/sign-up">
+                                <button className="btn1">Registrarse</button>
+                            </Link>
+                        </li>
+                        {/* Elemento de lista para el enlace 'Iniciar Sesión' con un botón */}
+                        <li className="link">
+                            <Link to="/login">
+                                <button className="btn1">Iniciar Sesión</button>
+                            </Link>
+                        </li>
+                    </>
+                )}
             </ul>
         </nav>
     );
