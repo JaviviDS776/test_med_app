@@ -3,6 +3,45 @@
  * Styling for the Header Navbar
  */
 
+ .user-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.3rem 0.8rem;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
 /* Styling for the main navigation bar */
 nav {
     padding: 1.5rem;
@@ -17,49 +56,12 @@ nav {
     background-color: #fff;
 }
 
-/* Styling for the dropdown menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    display: none;
-    min-width: 120px;
-    padding: 8px 0;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-}
-
 /* Styling for the user welcome message */
 .welcome-user {
     position: relative;
     cursor: pointer;
 }
 
-/* Display dropdown menu on hover */
-.welcome-user:hover .dropdown-menu {
-    display: block;
-}
-
-/* Styling for the items in the dropdown menu */
-.dropdown-menu li {
-    display: block;
-    width: 150px;
-    padding:5px;
-}
-
-/* Styling for links in the dropdown menu */
-.dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-/* Hover effect for links in the dropdown menu */
-.dropdown-menu li a:hover {
-    color: #2190ff;
-}
 
 /* Styling for the logo in the navbar */
 .nav__logo {
