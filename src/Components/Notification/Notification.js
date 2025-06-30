@@ -38,8 +38,7 @@ const Notification = ({ children }) => {
   // Return JSX elements to display Navbar, children components, and appointment details if user is logged in
   return (
     <div>
-      {/* Render Navbar component */}
-      <Navbar ></Navbar>
+      
       {/* Render children components */}
       {children}
       {/* Display appointment details if user is logged in and appointmentData is available */}

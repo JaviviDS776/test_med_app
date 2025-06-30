@@ -1,94 +1,170 @@
-// Following code has been commented with appropriate comments for your reference.
 import React, { useState } from 'react';
+import './ReviewForm.css';
 
-// Function component for giving reviews
-function GiveReviews() {
-  // State variables using useState hook
-  const [showForm, setShowForm] = useState(false);
-  const [submittedMessage, setSubmittedMessage] = useState('');
-  const [showWarning, setShowWarning] = useState(false);
-  const [formData, setFormData] = useState({
+const ReviewForm = ({ doctorData, appointmentDetails }) => {
+  const [showReviewForm, setShowReviewForm] = useState(false);
+  const [reviewData, setReviewData] = useState({
     name: '',
     review: '',
     rating: 0
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedReview, setSubmittedReview] = useState(null);
 
-  // Function to handle button click event
-  const handleButtonClick = () => {
-    setShowForm(true);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setReviewData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  // Function to handle form input changes
-  const handleChange = (e) => {
-    // Update the form data based on user input
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleRatingChange = (rating) => {
+    setReviewData(prev => ({
+      ...prev,
+      rating
+    }));
   };
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmittedMessage(formData);
-    setFormData({
-      name: '',
-      review: '',
-      rating: 0
-    });
-    // Check if all required fields are filled before submission
-    if (formData.name && formData.review && formData.rating > 0) {
-      setShowWarning(false);
-    } else {
-      setShowWarning(true);
+    
+    // Validar que todos los campos estén llenos
+    if (!reviewData.name || !reviewData.review || reviewData.rating === 0) {
+      alert('Please fill in all fields and provide a rating');
+      return;
     }
+
+    // Guardar la reseña enviada
+    setSubmittedReview({
+      ...reviewData,
+      doctorName: doctorData?.name || 'Dr. Smith',
+      appointmentDate: appointmentDetails?.date || new Date().toLocaleDateString(),
+      submittedAt: new Date().toLocaleDateString()
+    });
+    
+    setIsSubmitted(true);
+    setShowReviewForm(false);
+    
+    console.log('Review submitted:', reviewData);
+  };
+
+  const renderStarRating = () => {
+    return (
+      <div className="star-rating">
+        <label>Rating:</label>
+        <div className="stars">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span
+              key={star}
+              className={`star ${reviewData.rating >= star ? 'filled' : ''}`}
+              onClick={() => handleRatingChange(star)}
+            >
+              ★
+            </span>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
-    <div>
-      <h2>Form with Message</h2>
-      {!showForm ? (
-        // Display button to open the form
-        <button onClick={handleButtonClick}>Open Form</button>
-      ) : (
-        // Display form for giving feedback
-        <form onSubmit={handleSubmit}>
-          <h2>Give Your Feedback</h2>
-          {/* Display warning message if not all fields are filled */}
-          {showWarning && <p className="warning">Please fill out all fields.</p>}
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="review">Review:</label>
-            <textarea id="review" name="review" value={formData.review} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="rating">Rating:</label>
-            <select
-              id="rating"
-              value={formData.rat}
-              onChange={handleChange}
-              required
+    <div className="review-form-container">
+      <div className="consultation-info">
+        <h3>Review Your Consultation</h3>
+        <div className="doctor-info">
+          <p><strong>Doctor:</strong> {doctorData?.name || 'Dr. Smith'}</p>
+          <p><strong>Speciality:</strong> {doctorData?.speciality || 'General Medicine'}</p>
+          <p><strong>Appointment Date:</strong> {appointmentDetails?.date || 'Today'}</p>
+          <p><strong>Appointment Time:</strong> {appointmentDetails?.time || '10:00 AM'}</p>
+        </div>
+      </div>
+
+      <div className="feedback-section">
+        <h4>Provide Feedback</h4>
+        {!isSubmitted ? (
+          !showReviewForm ? (
+            <button 
+              className="feedback-trigger-btn"
+              onClick={() => setShowReviewForm(true)}
             >
-              <option value="1">1 - Poor</option>
-              <option value="2">2 - Fair</option>
-              <option value="3">3 - Good</option>
-              <option value="4">4 - Very Good</option>
-              <option value="5">5 - Excellent</option>
-            </select>
+              Click Here
+            </button>
+          ) : (
+            <form onSubmit={handleSubmit} className="review-form">
+              <div className="form-group">
+                <label htmlFor="name">Your Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={reviewData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="review">Your Review:</label>
+                <textarea
+                  id="review"
+                  name="review"
+                  value={reviewData.review}
+                  onChange={handleInputChange}
+                  placeholder="Write your feedback here..."
+                  rows="4"
+                  required
+                />
+              </div>
+
+              {renderStarRating()}
+
+              <div className="form-actions">
+                <button type="submit" className="submit-btn">
+                  Submit Review
+                </button>
+                <button 
+                  type="button" 
+                  className="cancel-btn"
+                  onClick={() => setShowReviewForm(false)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          )
+        ) : (
+          <div className="feedback-disabled">
+            <button className="feedback-trigger-btn disabled" disabled>
+              Feedback Already Submitted
+            </button>
           </div>
-          {/* Submit button for form submission */}
-          <button type="submit">Submit</button>
-        </form>
-      )}
-      {/* Display the submitted message if available */}
-      {submittedMessage && (
-        <div>
-          <h3>Submitted Message:</h3>
-          <p>{submittedMessage}</p>
+        )}
+      </div>
+
+      {/* Mostrar la reseña enviada */}
+      {submittedReview && (
+        <div className="submitted-review">
+          <h4>Your Submitted Review</h4>
+          <div className="review-display">
+            <p><strong>Name:</strong> {submittedReview.name}</p>
+            <p><strong>Rating:</strong> 
+              <span className="rating-display">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span key={star} className={`star ${submittedReview.rating >= star ? 'filled' : ''}`}>
+                    ★
+                  </span>
+                ))}
+              </span>
+            </p>
+            <p><strong>Review:</strong> {submittedReview.review}</p>
+            <p><strong>Submitted on:</strong> {submittedReview.submittedAt}</p>
+          </div>
         </div>
       )}
     </div>
   );
-}
+};
 
-export default GiveReviews;
+export default ReviewForm;
