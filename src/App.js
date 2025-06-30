@@ -13,6 +13,7 @@ import InstantConsultation from './Components/InstantConsultationBooking/Instant
 import Notification from './Components/Notification/Notification';
 import GiveReviews from './Components/ReviewForm/ReviewForm';
 import ProfileForm from './Components/ProfileCard/ProfileCard';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,8 @@ function App() {
                 <Route path="/instant-consultation" element={<InstantConsultation />} />
                 <Route path="/reviews" element={<GiveReviews />}/>
                 <Route path="/profile" element={<ProfileForm />}/>
+                <Route path="/reports" element={<ReportsLayout />}/>
+
             </Routes>
           </Notification>
         </BrowserRouter>

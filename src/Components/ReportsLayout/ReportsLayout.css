@@ -1,0 +1,36 @@
+.reports-container {
+    margin: 120px auto 0 auto;
+    width: 80%;
+    height: auto;
+    padding-bottom: 5vh;
+  }
+  
+  .reports-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+  
+  .reports-table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0px;
+  }
+  
+  .report-button {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #FF8E3C;
+      border-radius: 10px;
+      padding: 0.5vw 1vw;
+      color: #FFFFFE;
+  }
+  
+  tr {
+    height: 8vh;
+    width: 100%;
+  }
+  
+  tr td {
+      padding: 0 1vw;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
