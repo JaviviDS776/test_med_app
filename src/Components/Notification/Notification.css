@@ -1,0 +1,39 @@
+/* Notification.css */
+
+/* Container for the appointment card */
+.appointment-card {
+  background-color: #007BFF; /* Blue background color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px 0; /* Vertical spacing */
+  padding: 15px; /* Inner spacing */
+  max-width: 400px; /* Maximum width */
+  width: 100%; /* Full width */
+}
+
+/* Content within the appointment card */
+.appointment-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Title for the appointment details */
+.appointment-card__title {
+  font-size: 1.5em; /* Larger font size */
+  margin-bottom: 10px; /* Space below the title */
+  color: #FFFFFF; /* White text color */
+}
+
+/* Message within the appointment card */
+.appointment-card__message {
+  font-size: 1em; /* Standard font size */
+  color: #FFFFFF; /* White text color */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Strong text for labels */
+.appointment-card__message strong {
+  color: #FFD700; /* Gold color for labels to stand out */
+}

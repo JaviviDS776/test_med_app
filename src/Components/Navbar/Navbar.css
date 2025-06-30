@@ -1,11 +1,9 @@
-
-
 /** 
- * El siguiente código ha sido comentado con comentarios apropiados para su referencia.
- * Estilo para la barra de navegación del encabezado
+ * Following code has been commented with appropriate comments for your reference.
+ * Styling for the Header Navbar
  */
 
-/* Estilo para la barra de navegación principal */
+/* Styling for the main navigation bar */
 nav {
     padding: 1.5rem;
     position: fixed;
@@ -19,7 +17,7 @@ nav {
     background-color: #fff;
 }
 
-/* Estilo para el menú desplegable */
+/* Styling for the dropdown menu */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -33,37 +31,37 @@ nav {
     border-radius: 4px;
 }
 
-/* Estilo para el mensaje de bienvenida al usuario */
+/* Styling for the user welcome message */
 .welcome-user {
     position: relative;
     cursor: pointer;
 }
 
-/* Mostrar el menú desplegable al pasar el ratón */
+/* Display dropdown menu on hover */
 .welcome-user:hover .dropdown-menu {
     display: block;
 }
 
-/* Estilo para los elementos en el menú desplegable */
+/* Styling for the items in the dropdown menu */
 .dropdown-menu li {
     display: block;
     width: 150px;
     padding:5px;
 }
 
-/* Estilo para los enlaces en el menú desplegable */
+/* Styling for links in the dropdown menu */
 .dropdown-menu li a {
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Efecto de pasar el ratón para los enlaces en el menú desplegable */
+/* Hover effect for links in the dropdown menu */
 .dropdown-menu li a:hover {
     color: #2190ff;
 }
 
-/* Estilo para el logo en la barra de navegación */
+/* Styling for the logo in the navbar */
 .nav__logo {
     font-size: 2rem;
     font-weight: 600;
@@ -71,19 +69,19 @@ nav {
     cursor: pointer;
 }
 
-/* Estilo para un span dentro del logo */
+/* Styling for a span within the logo */
 .nav__logo span {
     color: #3685fb;
 }
 
-/* Estilo para el icono en la barra de navegación */
+/* Styling for the icon in the navbar */
 .nav__icon {
     display: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
-/* Estilo para los enlaces de navegación */
+/* Styling for the navigation links */
 .nav__links {
     list-style: none;
     display: flex;
@@ -93,19 +91,19 @@ nav {
     font-weight: 500;
 }
 
-/* Estilo para enlaces individuales en la navegación */
+/* Styling for individual links in the navigation */
 .link a {
     padding: 0 1rem;
     color: #0d213f;
     transition: 0.3s;
 }
 
-/* Efecto de pasar el ratón para enlaces individuales en la navegación */
+/* Hover effect for individual links in the navigation */
 .link a:hover {
     color: #3685fb;
 }
 
-/* Consultas de medios para la adaptabilidad móvil */
+/* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
     .nav__logo {
         margin-right: auto;
@@ -136,11 +134,11 @@ nav {
         border-radius: 0.5rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        animation: slideDown 0.5s ease-in-out; /* Efecto de animación */
+        animation: slideDown 0.5s ease-in-out; /* Animation effect */
     }
 }
 
-/* Fotogramas clave para la animación de deslizamiento hacia abajo */
+/* Keyframes for slide down animation */
 @keyframes slideDown {
     0% {
         transform: translateY(-10px);
@@ -152,7 +150,7 @@ nav {
     }
 }
 
-/* Estilos para botones */
+/* Button styles */
 .btn1 {
     border: 2px solid #3685fb;
     background-color: white;
@@ -161,8 +159,8 @@ nav {
 }
 
 .btn1:hover {
-    background-color: #3685fb; /* Efecto al pasar el ratón */
-    color: white; /* Efecto al pasar el ratón */
+    background-color: #3685fb; /* Hover effect */
+    color: white; /* Hover effect */
 }
 
 .btn2 {
@@ -171,13 +169,14 @@ nav {
     color: black;
     border-radius: 50px;
     height:30px;
-    display:flex; /* Alinear elementos y justificar contenido */
-    align-items:center; /* Alinear elementos y justificar contenido */
-    justify-content:center; /* Alinear elementos y justificar contenido */
-    margin-top:3px; /* Margen desde arriba */
+    display:flex; /* Align items and justify content */
+    align-items:center; /* Align items and justify content */
+    justify-content:center; /* Align items and justify content */
+    margin-top:3px; /* Margin from top */
 }
 
 .btn2:hover {
-    background-color:#3685fb; /* Efecto al pasar el ratón */
-    color:white; /* Efecto al pasar el ratón */
+    background-color:#3685fb; /* Hover effect */
+    color:white; /* Hover effect */
 }
+  

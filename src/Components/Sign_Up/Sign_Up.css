@@ -1,117 +1,117 @@
-/* Estilos para el elemento contenedor */
+/* Styles for the container element */
 .container {
-    max-width: 900px; /* Establecer el ancho máximo para el contenedor */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    padding: 40px; /* Agregar relleno dentro del contenedor */
-    margin-top: 10%; /* Establecer el margen superior como un porcentaje de la altura de la ventana */
-    overflow: hidden; /* Ocultar cualquier contenido desbordante */
+    max-width: 900px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 40px; /* Add padding inside the container */
+    margin-top: 10%; /* Set top margin as a percentage of the viewport height */
+    overflow: hidden; /* Hide any overflowing content */
 }
 
-/* Estilos para el ícono de visibilidad de la contraseña */
+/* Styles for the password visibility icon */
 .password-visibility {
-    position: relative; /* Establecer la posición relativa a su posición normal */
-    top: -39px; /* Mover el elemento 39 píxeles hacia arriba */
-    left: 92%; /* Mover el elemento 92% hacia la derecha */
-    cursor: pointer; /* Cambiar el cursor a puntero al pasar el mouse */
-    font-size: 17px; /* Establecer el tamaño de fuente */
+    position: relative; /* Set the position relative to its normal position */
+    top: -39px; /* Move the element 39 pixels up */
+    left: 92%; /* Move the element 92% to the right */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 17px; /* Set font size */
 }
 
-/* Estilos para el diseño de cuadrícula del formulario de registro */
+/* Styles for the grid layout of the signup form */
 .signup-grid {
-    display: grid; /* Usar diseño de cuadrícula para el elemento */
-    grid-template-columns: 0.1fr 1.5fr 8fr; /* Definir columnas con anchos fraccionarios */
-    grid-gap: 10px; /* Establecer el espacio entre los elementos de la cuadrícula */
+    display: grid; /* Use grid layout for the element */
+    grid-template-columns: 0.1fr 1.5fr 8fr; /* Define columns with fractional widths */
+    grid-gap: 10px; /* Set the gap between grid items */
 }
 
-/* Estilos para el texto principal de registro */
+/* Styles for the main signup text */
 .signup-text {
-    margin-top: 30px; /* Agregar margen superior */
-    grid-column: 1 / 4; /* Expandir a través de las tres columnas */
-    text-align: center; /* Alinear el texto al centro */
+    margin-top: 30px; /* Add top margin */
+    grid-column: 1 / 4; /* Span across all three columns */
+    text-align: center; /* Center-align text */
 }
 
-/* Estilos para texto adicional de registro */
+/* Styles for additional signup text */
 .signup-text1 {
-    grid-column: -1 / 3; /* Expandir desde la segunda a la tercera columna desde el final */
-    text-align: right; /* Alinear el texto a la derecha */
+    grid-column: -1 / 3; /* Span from second to third column from the end */
+    text-align: right; /* Right-align text */
 }
 
 .signup-text1 span {
-    color: #3c79a7; /* Establecer el color del texto */
-    font-weight: 600; /* Establecer el peso de la fuente en negrita */
-    cursor: pointer; /* Cambiar el cursor a puntero al pasar el mouse */
+    color: #3c79a7; /* Set text color */
+    font-weight: 600; /* Set font weight to bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Estilos para la sección del formulario de registro */
+/* Styles for the signup form section */
 .signup-form {
-    grid-column: 2 / 4; /* Expandir desde la segunda a la cuarta columna */
+    grid-column: 2 / 4; /* Span from second to fourth column */
 }
 
-/* Estilos para el contenedor general de registro */
+/* Styles for the overall signup container */
 .signup {
-    flex: 1; /* Usar diseño flexible para llenar el espacio disponible */
-    background-color: #fff; /* Establecer el color de fondo en blanco */
-    padding: 40px; /* Agregar relleno dentro del elemento */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregar una sombra de caja con opacidad */
+    flex: 1; /* Use flexible layout to fill available space */
+    background-color: #fff; /* Set background color to white */
+    padding: 40px; /* Add padding inside the element */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow with opacity */
 }
 
-/* Estilos para el encabezado de registro */
+/* Styles for the signup heading */
 .signup h1 {
-    margin-bottom: 20px; /* Agregar margen inferior al encabezado */
-    text-align: center; /* Alinear el texto al centro */
-    color: #3c79a7; /* Establecer el color del texto */
-    letter-spacing: .1em; /* Agregar espacio entre letras */
+    margin-bottom: 20px; /* Add bottom margin to the heading */
+    text-align: center; /* Center-align text */
+    color: #3c79a7; /* Set text color */
+    letter-spacing: .1em; /* Add letter-spacing between characters */
 }
 
-/* Estilos para el texto de rol en el registro */
+/* Styles for the role text in signup */
 .signup-role {
-    font-size: 16px; /* Establecer el tamaño de fuente */
-    margin-bottom: 10px; /* Agregar margen inferior */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 10px; /* Add bottom margin */
 }
 
-/* Estilos para grupos de formularios en el formulario de registro */
+/* Styles for form groups in the signup form */
 .form-group {
-    margin-bottom: 20px; /* Agregar margen inferior a los grupos de formularios */
+    margin-bottom: 20px; /* Add bottom margin to form groups */
 }
 
 .form-group label {
-    display: block; /* Mostrar etiquetas como bloques */
-    margin-bottom: 5px; /* Agregar margen inferior a las etiquetas */
-    font-weight: bold; /* Establecer el peso de la fuente en negrita para las etiquetas */
+    display: block; /* Display labels as blocks */
+    margin-bottom: 5px; /* Add bottom margin to labels */
+    font-weight: bold; /* Set font weight to bold for labels */
 }
 
-/* Estilos para controles de formulario en el formulario de registro */
+/* Styles for form controls in the signup form */
 .form-control {
-    width: 40%; /* Establecer el ancho de los controles de formulario */
-    padding: 8px; /* Agregar relleno dentro de los controles de formulario */
-    font-size: 16px; /* Establecer el tamaño de fuente */
-    border: 1px solid #ccc; /* Agregar borde con color */
-    border-radius: 4px; /* Agregar radio de borde para esquinas redondeadas */
+    width: 40%; /* Set width of form controls */
+    padding: 8px; /* Add padding inside form controls */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add border with color */
+    border-radius: 4px; /* Add border radius for rounded corners */
 }
 
-/* Estilos para el grupo de botones en el formulario de registro */
+/* Styles for button group in the signup form */
 .btn-group {
-    margin-top: .0001px; /* Agregar un pequeño margen superior al grupo de botones */
-    margin-bottom: 20px; /* Agregar margen inferior al grupo de botones */
+    margin-top: .0001px; /* Add a small top margin to button group */
+    margin-bottom: 20px; /* Add bottom margin to button group */
 }
 
-/* Estilos para botones en el formulario de registro */
+/* Styles for buttons in the signup form */
 .btn {
-    padding: 10px 20px; /* Establecer relleno para los botones */
-    font-size: 16px; /* Establecer el tamaño de fuente para los botones */
-    border: none; /* Eliminar bordes de los botones */
-    border-radius: 4px; /* Agregar radio de borde para esquinas redondeadas */
-    cursor: pointer; /* Cambiar el cursor a puntero al pasar el mouse */
+    padding: 10px 20px; /* Set padding for buttons */
+    font-size: 16px; /* Set font size for buttons */
+    border: none; /* Remove button borders */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Estilos para el botón primario en el formulario de registro */
+/* Styles for primary button in the signup form */
 .btn-primary {
-    background-color: #007bff; /* Establecer el color de fondo para el botón primario */
-    color: #fff; /* Establecer el color del texto para el botón primario */
+    background-color: #007bff; /* Set background color for primary button */
+    color: #fff; /* Set text color for primary button */
 }
 
-/* Estilos para el botón de peligro en el formulario de registro */
+/* Styles for danger button in the signup form */
 .btn-danger {
-    background-color: #dc3545; /* Establecer el color de fondo para el botón de peligro */
-    color: #fff; /* Establecer el color del texto para el botón de peligro */
+    background-color: #dc3545; /* Set background color for danger button */
+    color: #fff; /* Set text color for danger button */
 }

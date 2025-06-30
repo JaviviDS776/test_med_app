@@ -1,55 +1,55 @@
-/* Estilos para el contenedor principal */
+/* Styles for the main container */
 .container {
-    max-width: 900px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    padding: 40px; /* Relleno dentro del contenedor */
-    margin-top: 10%; /* Margen superior del 10% */
+    max-width: 900px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 40px; /* Padding inside the container */
+    margin-top: 10%; /* Top margin of 10% */
 }
 
-/* Estilos para grupos de formularios */
+/* Styles for form groups */
 .form-group {
-    margin-bottom: 20px; /* Margen inferior para el espacio entre grupos de formularios */
+    margin-bottom: 20px; /* Bottom margin for spacing between form groups */
 }
 
-/* Estilos para etiquetas de grupos de formularios */
+/* Styles for form group labels */
 .form-group label {
-    display: block; /* Hacer que las etiquetas se muestren como elementos de bloque */
-    margin-bottom: 5px; /* Margen inferior para el espacio debajo de las etiquetas */
-    font-weight: bold; /* Texto en negrita para las etiquetas */
+    display: block; /* Make labels display as block elements */
+    margin-bottom: 5px; /* Bottom margin for spacing below labels */
+    font-weight: bold; /* Bold text for labels */
 }
 
-/* Estilos para controles de formulario */
+/* Styles for form controls */
 .form-control {
-    width: 40%; /* Ancho de los controles de formulario */
-    padding: 8px; /* Relleno dentro de los controles de formulario */
-    font-size: 16px; /* Tamaño de fuente de los controles de formulario */
-    border: 1px solid #ccc; /* Borde alrededor de los controles de formulario */
-    border-radius: 4px; /* Radio de borde para esquinas redondeadas */
+    width: 40%; /* Width of form controls */
+    padding: 8px; /* Padding inside form controls */
+    font-size: 16px; /* Font size of form controls */
+    border: 1px solid #ccc; /* Border around form controls */
+    border-radius: 4px; /* Border radius for rounded corners */
 }
 
-/* Estilos para grupos de botones */
+/* Styles for button groups */
 .btn-group {
-    margin-top: .0001px; /* Margen superior para el espacio sobre grupos de botones */
-    margin-bottom: 20px; /* Margen inferior para el espacio debajo de grupos de botones */
+    margin-top: .0001px; /* Top margin for spacing above button groups */
+    margin-bottom: 20px; /* Bottom margin for spacing below button groups */
 }
 
-/* Estilos para botones */
+/* Styles for buttons */
 .btn {
-    padding: 10px 20px; /* Relleno dentro de los botones */
-    font-size: 16px; /* Tamaño de fuente de los botones */
-    border: none; /* Sin borde para los botones */
-    border-radius: 4px; /* Radio de borde para esquinas redondeadas en los botones */
-    cursor: pointer; /* Estilo del cursor al pasar sobre los botones */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 16px; /* Font size of buttons */
+    border: none; /* No border for buttons */
+    border-radius: 4px; /* Border radius for rounded corners on buttons */
+    cursor: pointer; /* Cursor style on hover for buttons */
 }
 
-/* Estilos para botones primarios */
+/* Styles for primary buttons */
 .btn-primary {
-    background-color: #007bff; /* Color de fondo para botones primarios */
-    color: #fff; /* Color de texto para botones primarios */
+    background-color: #007bff; /* Background color for primary buttons */
+    color: #fff; /* Text color for primary buttons */
 }
 
-/* Estilos para botones de peligro (rojos) */
+/* Styles for danger (red) buttons */
 .btn-danger {
-    background-color: #dc3545; /* Color de fondo para botones de peligro */
-    color: #fff; /* Color de texto para botones de peligro */
+    background-color: #dc3545; /* Background color for danger buttons */
+    color: #fff; /* Text color for danger buttons */
 }
